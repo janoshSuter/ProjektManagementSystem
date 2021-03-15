@@ -16,13 +16,14 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         DataContext dbContext;
         AddPhaseForm addPhaseForm;
         int vorgehensmodelId;
-
+        private string savePath;
         const string dateFormat = "dd.MM.yyyy";
 
-        public PhasenForm(DataContext dbcontext, int vorgehensmodelid)
+        public PhasenForm(DataContext dbcontext, string userSavePath, int vorgehensmodelid)
         {
             dbContext = dbcontext;
             vorgehensmodelId = vorgehensmodelid;
+            savePath = userSavePath;
             InitializeComponent();
             loadPhasenDataGrid();
 
@@ -75,7 +76,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         private void addPhaseButton_Click(object sender, EventArgs e)
         {
-            addPhaseForm = new AddPhaseForm(dbContext, false, 0);
+            addPhaseForm = new AddPhaseForm(dbContext, false, savePath, 0);
             addPhaseForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addPhasenForm_FormClosing);
             addPhaseForm.ShowDialog();
 
@@ -227,7 +228,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     Phase phase = zu_phase.First().phasen;
                     //open edit Dialog -> ein element editieren
 
-                    addPhaseForm = new AddPhaseForm(dbContext, true, phasenId);
+                    addPhaseForm = new AddPhaseForm(dbContext, true, savePath, phasenId);
 
                     addPhaseForm.phaseId = phase.phaseId;
                     addPhaseForm.BezeichnungTextBox.Text = phase.bezeichnung;

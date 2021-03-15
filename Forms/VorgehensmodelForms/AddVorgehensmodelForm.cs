@@ -17,6 +17,7 @@ namespace ProjektManagementSystem
         PhasenForm vorgehensmodelPhasenForm;
         DataContext dbContext;
         int vorgehensmodelId;
+        private string savePath;
 
         public int activeVorgehensmodelId { get => vorgehensmodelId; set => vorgehensmodelId = value; }
         public TextBox TextBoxName { get => textBoxName; set => textBoxName = value; }
@@ -24,10 +25,11 @@ namespace ProjektManagementSystem
         public Label PhasenLabel { get => phasenLbl; set => phasenLbl = value; }
 
 
-        public AddVorgehensmodelForm(DataContext dbcontext, bool editmode)
+        public AddVorgehensmodelForm(DataContext dbcontext, string userSavePath, bool editmode)
         {
-            InitializeComponent();
             dbContext = dbcontext;
+            savePath = userSavePath;
+            InitializeComponent();
             updateUi(editmode);
         }
 
@@ -66,7 +68,7 @@ namespace ProjektManagementSystem
 
         private void editPhasenButton_Click(object sender, EventArgs e)
         {
-            vorgehensmodelPhasenForm = new PhasenForm(dbContext, activeVorgehensmodelId);
+            vorgehensmodelPhasenForm = new PhasenForm(dbContext, savePath, activeVorgehensmodelId);
             vorgehensmodelPhasenForm.ShowDialog();
 
             updateUi(true);

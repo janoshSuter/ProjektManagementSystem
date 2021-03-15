@@ -33,6 +33,7 @@ namespace ProjektManagementSystem
             this.mitarbeiterBUtton = new System.Windows.Forms.Button();
             this.vorgehensModelButton = new System.Windows.Forms.Button();
             this.KostenartButton = new System.Windows.Forms.Button();
+            this.pathButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // projekteButton
@@ -75,11 +76,22 @@ namespace ProjektManagementSystem
             this.KostenartButton.UseVisualStyleBackColor = true;
             this.KostenartButton.Click += new System.EventHandler(this.KostenartButton_Click);
             // 
+            // pathButton
+            // 
+            this.pathButton.Location = new System.Drawing.Point(12, 244);
+            this.pathButton.Name = "pathButton";
+            this.pathButton.Size = new System.Drawing.Size(490, 52);
+            this.pathButton.TabIndex = 3;
+            this.pathButton.Text = "Share-Verzeichnispfad setzen";
+            this.pathButton.UseVisualStyleBackColor = true;
+            this.pathButton.Click += new System.EventHandler(this.SharepathButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 245);
+            this.ClientSize = new System.Drawing.Size(514, 302);
+            this.Controls.Add(this.pathButton);
             this.Controls.Add(this.KostenartButton);
             this.Controls.Add(this.vorgehensModelButton);
             this.Controls.Add(this.mitarbeiterBUtton);
@@ -97,5 +109,6 @@ namespace ProjektManagementSystem
         private System.Windows.Forms.Button mitarbeiterBUtton;
         private System.Windows.Forms.Button vorgehensModelButton;
         private System.Windows.Forms.Button KostenartButton;
+        private System.Windows.Forms.Button pathButton;
     }
 }

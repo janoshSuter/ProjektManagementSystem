@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Linq;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,14 +21,16 @@ namespace ProjektManagementSystem.DokumenteForms
         int phaseId;
         int projektId;
         int meilensteinId;
+        private string savePath;
 
-        public DokumenteForm(DataContext dbcontext, int aktivitaetid, int phaseid, int projektid, int meilensteinid)
+        public DokumenteForm(DataContext dbcontext, string usersavepath, int aktivitaetid, int phaseid, int projektid, int meilensteinid)
         {
             dbContext = dbcontext;
             aktivitaetId = aktivitaetid;
             phaseId = phaseid;
             projektId = projektid;
             meilensteinId = meilensteinid;
+            savePath = usersavepath;
             InitializeComponent();
             loadDokumenteDataGrid();
         }
@@ -160,7 +163,7 @@ namespace ProjektManagementSystem.DokumenteForms
         private void addExterneKostenButton_Click(object sender, EventArgs e)
         {
             //addDokumenteForm = new AddDokumenteForm(dbContext, false, 0);
-            addDokumenteForm = new AddDokumenteForm(dbContext, aktivitaetId, phaseId, projektId, meilensteinId);
+            addDokumenteForm = new AddDokumenteForm(dbContext, savePath, aktivitaetId, phaseId, projektId, meilensteinId);
             addDokumenteForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addDokumentForm_FormClosing);
             addDokumenteForm.ShowDialog();
 
@@ -196,34 +199,59 @@ namespace ProjektManagementSystem.DokumenteForms
 
         private void deleteDokumentButton_Click(object sender, EventArgs e)
         {
-            int externeKostenId;
+            int dokumentId;
             DataGridViewSelectedRowCollection selectedRow;
             if (dokumenteDataGrid.SelectedRows.Count == 1 && dokumenteDataGrid.SelectedRows[0].Cells[0].Value != null)
             {
                 selectedRow = dokumenteDataGrid.SelectedRows;
-                externeKostenId = Int32.Parse(selectedRow[0].Cells[0].Value.ToString());
+                dokumentId = Int32.Parse(selectedRow[0].Cells[0].Value.ToString());
             }
             else
             {
                 return;
             }
             //Connect auf Tabelle inkl. dem Mapping
-            Table<ExterneKosten> my_inhalt = dbContext.GetTable<ExterneKosten>();
+            Table<Dokument> my_inhalt = dbContext.GetTable<Dokument>();
 
             //Abfrage
             var zu_loeschen =
-                                from externeKosten in my_inhalt
-                                where externeKosten.externeKostenId == externeKostenId
-                                select externeKosten;
+                                from dokument in my_inhalt
+                                where dokument.dokumentId == dokumentId
+                                select dokument;
 
             //Delete on submit aufrufen -> ein element löschen
-            my_inhalt.DeleteOnSubmit(zu_loeschen.First());
+            Dokument deleteDokument = zu_loeschen.First();
+            my_inhalt.DeleteOnSubmit(deleteDokument);
+            deleteFile(deleteDokument);
 
             //Aenderung auf DB auslösen
             dbContext.SubmitChanges();
 
             // datagrid neu befüllen
             loadDokumenteDataGrid();
+        }
+
+        // Files to be deleted  from share
+        private void deleteFile(Dokument deleteDokument)
+        {
+            try
+            {
+                // Check if file exists with its full path    
+                string deletePath = Path.Combine(deleteDokument.dokumentpfad, deleteDokument.name);
+                if (File.Exists(deletePath))
+                {
+                    // If file found, delete it    
+                    File.Delete(deletePath);
+                    Console.WriteLine("File deleted.");
+                }
+                else Console.WriteLine("Could not deleete File from Directory " + deletePath + ". File not found");
+            }
+            catch (IOException ioExp)
+            {
+                Console.WriteLine(ioExp.Message);
+            }
+
+            Console.ReadKey();
         }
     }
 }

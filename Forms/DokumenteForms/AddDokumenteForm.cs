@@ -9,6 +9,7 @@ namespace ProjektManagementSystem
 {
     public partial class AddDokumenteForm : Form
     {
+        private const string DEFAULT_DIALOG_TEXT = "Save Files Here";
         string strSavePath = @"C:\PMS\";
         DataTable dtData;
         DataContext dbContext;
@@ -17,7 +18,7 @@ namespace ProjektManagementSystem
         int projektId;
         int meilensteinId;
 
-        public AddDokumenteForm(DataContext dbcontext, int aktivitaetid, int phaseid, int projektid, int meilenstenid)
+        public AddDokumenteForm(DataContext dbcontext,string usersavepath , int aktivitaetid, int phaseid, int projektid, int meilenstenid)
         {
             InitializeComponent();
             dbContext = dbcontext;
@@ -25,6 +26,10 @@ namespace ProjektManagementSystem
             phaseId = phaseid;
             projektId = projektid;
             meilensteinId = meilenstenid;
+            if (!"".Equals(usersavepath) && !DEFAULT_DIALOG_TEXT.Equals(usersavepath))
+            {
+                strSavePath = @usersavepath;
+            }
         }
 
         private void FileUpload_Load(object sender, EventArgs e)

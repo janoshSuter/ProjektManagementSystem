@@ -17,14 +17,16 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         AddAktivitaetenForm addAktivitaetenForm;
         DataContext dbContext;
+        private string savePath;
         int phaseId;
 
         const string dateFormat = "dd.MM.yyyy";
 
-        public AktivitaetenForm(DataContext dbcontext, int phaseid)
+        public AktivitaetenForm(DataContext dbcontext, string userSavePath, int phaseid)
         {
             phaseId = phaseid;
             dbContext = dbcontext;
+            savePath = userSavePath;
             InitializeComponent();
             loadAktivitaetenDataGrid();
         }
@@ -150,7 +152,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         private void addActivityButton_Click(object sender, EventArgs e)
         {
-            addAktivitaetenForm = new AddAktivitaetenForm(dbContext, false, -1);
+            addAktivitaetenForm = new AddAktivitaetenForm(dbContext, false, "", -1);
             addAktivitaetenForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.addAktivitaetenForm_FormClosing);
             addAktivitaetenForm.ShowDialog();
         }
@@ -185,7 +187,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     Mitarbeiter mitarbeiter = zu_aktivitaet.First().mitarbeiter;
                     //open edit Dialog -> ein element editieren
 
-                    addAktivitaetenForm = new AddAktivitaetenForm(dbContext, true, aktvitaetId);
+                    addAktivitaetenForm = new AddAktivitaetenForm(dbContext, true, savePath, aktvitaetId);
                     addAktivitaetenForm.aktvitaetId = aktvitaetId;
                     
                     addAktivitaetenForm.aktvitaetId = aktivitaet.aktivitaetId;

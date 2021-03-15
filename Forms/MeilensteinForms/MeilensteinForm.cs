@@ -15,12 +15,14 @@ namespace ProjektManagementSystem
     {
         DataContext dbContext;
         private int phaseId;
+        private string savePath;
         AddMeilensteinForm addMeilensteinForm;
 
-        public MeilensteinForm(DataContext dbcontext, int phaseid)
+        public MeilensteinForm(DataContext dbcontext, string usersavepath, int phaseid)
         {
             dbContext = dbcontext;
             phaseId = phaseid;
+            savePath = usersavepath;
             InitializeComponent();
             loadMeilensteinDataGrid();
         }
@@ -63,7 +65,7 @@ namespace ProjektManagementSystem
 
         private void addMeilensteinButton_Click(object sender, EventArgs e)
         {
-            addMeilensteinForm = new AddMeilensteinForm(dbContext, false, -1);
+            addMeilensteinForm = new AddMeilensteinForm(dbContext, savePath, false, -1);
             addMeilensteinForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.meilensteinForm_FormClosing);
             addMeilensteinForm.ShowDialog();
         }
@@ -157,7 +159,7 @@ namespace ProjektManagementSystem
                     Meilenstein meilenstein = zu_meilenstein.First().meilenstein;
                     //open edit Dialog -> ein element editieren
 
-                    addMeilensteinForm = new AddMeilensteinForm(dbContext, true, meilensteinId);
+                    addMeilensteinForm = new AddMeilensteinForm(dbContext,  savePath, true, meilensteinId);
 
                     addMeilensteinForm.BezeichnungTextBox.Text = meilenstein.bezeichnung;
                     addMeilensteinForm.AbschlussdatumDateTime.Text = meilenstein.abschlussdatum.ToString();
