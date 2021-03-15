@@ -74,6 +74,9 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             editMeilensteineButton.Visible = editMode;
             meilensteineLabel.Visible = editMode;
             linkLabelDokumente.Visible = editMode;
+            StartdatumGeplantDatePicker.Enabled = !editMode;
+            EnddatumGeplantDatePicker.Enabled = !editMode;
+            ReviewdatumGeplantDatePicker.Enabled = !editMode;
             if (!editMode)
             {
                 aktivitaetenTitelLbl.Text = "Die Aktivitäten können später der Phase hinzugefügt werden";

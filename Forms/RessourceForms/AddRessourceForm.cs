@@ -25,6 +25,7 @@ namespace ProjektManagementSystem.RessourceForms
             editMode = editmode;
             InitializeComponent();
             loadMitarbeiterToComboBox();
+            StundenGeplantTextBox.Enabled = false;
         }
 
         private void loadMitarbeiterToComboBox()

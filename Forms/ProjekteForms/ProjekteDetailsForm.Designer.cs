@@ -126,6 +126,7 @@ namespace ProjektManagementSystem
             // 
             // endDatumGeplantDatePicker
             // 
+            this.endDatumGeplantDatePicker.Enabled = false;
             this.endDatumGeplantDatePicker.Location = new System.Drawing.Point(140, 250);
             this.endDatumGeplantDatePicker.Name = "endDatumGeplantDatePicker";
             this.endDatumGeplantDatePicker.Size = new System.Drawing.Size(200, 20);
@@ -192,6 +193,7 @@ namespace ProjektManagementSystem
             // 
             // startdatumGeplantDatePicker
             // 
+            this.startdatumGeplantDatePicker.Enabled = false;
             this.startdatumGeplantDatePicker.Location = new System.Drawing.Point(140, 206);
             this.startdatumGeplantDatePicker.Name = "startdatumGeplantDatePicker";
             this.startdatumGeplantDatePicker.Size = new System.Drawing.Size(200, 20);
@@ -273,6 +275,7 @@ namespace ProjektManagementSystem
             // 
             // vorgehensmodelComboBox
             // 
+            this.vorgehensmodelComboBox.Enabled = false;
             this.vorgehensmodelComboBox.FormattingEnabled = true;
             this.vorgehensmodelComboBox.Location = new System.Drawing.Point(538, 59);
             this.vorgehensmodelComboBox.Name = "vorgehensmodelComboBox";
