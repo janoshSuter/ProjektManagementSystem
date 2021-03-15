@@ -81,122 +81,122 @@
     <Compile Include="DbEnitities\ExterneKosten.cs" />
     <Compile Include="DbEnitities\Ressource.cs" />
     <Compile Include="DbEnitities\Vorgehensmodel_PhaseId.cs" />
-    <Compile Include="DokumenteForms\DokumenteForm.cs">
+    <Compile Include="Forms\DokumenteForms\DokumenteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DokumenteForms\DokumenteForm.Designer.cs">
+    <Compile Include="Forms\DokumenteForms\DokumenteForm.Designer.cs">
       <DependentUpon>DokumenteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DokumenteForms\AddDokumenteForm.cs">
+    <Compile Include="Forms\DokumenteForms\AddDokumenteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DokumenteForms\AddDokumenteForm.Designer.cs">
+    <Compile Include="Forms\DokumenteForms\AddDokumenteForm.Designer.cs">
       <DependentUpon>AddDokumenteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KostenartForms\AddKostenartForm.cs">
+    <Compile Include="Forms\KostenartForms\AddKostenartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KostenartForms\AddKostenartForm.Designer.cs">
+    <Compile Include="Forms\KostenartForms\AddKostenartForm.Designer.cs">
       <DependentUpon>AddKostenartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="KostenartForms\KostenartForm.cs">
+    <Compile Include="Forms\KostenartForms\KostenartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KostenartForms\KostenartForm.Designer.cs">
+    <Compile Include="Forms\KostenartForms\KostenartForm.Designer.cs">
       <DependentUpon>KostenartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbEnitities\Meilenstein.cs" />
-    <Compile Include="KostenartForms\KostenartComboboxItem.cs">
+    <Compile Include="Forms\KostenartForms\KostenartComboboxItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MeilensteinForms\AddMeilensteinForm.cs">
+    <Compile Include="Forms\MeilensteinForms\AddMeilensteinForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MeilensteinForms\AddMeilensteinForm.Designer.cs">
+    <Compile Include="Forms\MeilensteinForms\AddMeilensteinForm.Designer.cs">
       <DependentUpon>AddMeilensteinForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MeilensteinForms\MeilensteinForm.cs">
+    <Compile Include="Forms\MeilensteinForms\MeilensteinForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MeilensteinForms\MeilensteinForm.Designer.cs">
+    <Compile Include="Forms\MeilensteinForms\MeilensteinForm.Designer.cs">
       <DependentUpon>MeilensteinForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MitarbeiterForms\AddMitarbeiterForm.cs">
+    <Compile Include="Forms\MitarbeiterForms\AddMitarbeiterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MitarbeiterForms\AddMitarbeiterForm.Designer.cs">
+    <Compile Include="Forms\MitarbeiterForms\AddMitarbeiterForm.Designer.cs">
       <DependentUpon>AddMitarbeiterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjekteForms\CreateProjektWizardForm.cs">
+    <Compile Include="Forms\ProjekteForms\CreateProjektWizardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjekteForms\CreateProjektWizardForm.Designer.cs">
+    <Compile Include="Forms\ProjekteForms\CreateProjektWizardForm.Designer.cs">
       <DependentUpon>CreateProjektWizardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MitarbeiterForms\MitarbeiterComboboxItem.cs">
+    <Compile Include="Forms\MitarbeiterForms\MitarbeiterComboboxItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjekteForms\ProjekteDetailsForm.cs">
+    <Compile Include="Forms\ProjekteForms\ProjekteDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjekteForms\ProjekteDetailsForm.Designer.cs">
+    <Compile Include="Forms\ProjekteForms\ProjekteDetailsForm.Designer.cs">
       <DependentUpon>ProjekteDetailsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExterneKostenForms\AddExterneKostenForm.cs">
+    <Compile Include="Forms\ExterneKostenForms\AddExterneKostenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExterneKostenForms\AddExterneKostenForm.Designer.cs">
+    <Compile Include="Forms\ExterneKostenForms\AddExterneKostenForm.Designer.cs">
       <DependentUpon>AddExterneKostenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExterneKostenForms\ExterneKostenForm.cs">
+    <Compile Include="Forms\ExterneKostenForms\ExterneKostenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExterneKostenForms\ExterneKostenForm.Designer.cs">
+    <Compile Include="Forms\ExterneKostenForms\ExterneKostenForm.Designer.cs">
       <DependentUpon>ExterneKostenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RessourceForms\AddRessourceForm.cs">
+    <Compile Include="Forms\RessourceForms\AddRessourceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RessourceForms\AddRessourceForm.Designer.cs">
+    <Compile Include="Forms\RessourceForms\AddRessourceForm.Designer.cs">
       <DependentUpon>AddRessourceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RessourceForms\RessourcesForm.cs">
+    <Compile Include="Forms\RessourceForms\RessourcesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RessourceForms\RessourcesForm.Designer.cs">
+    <Compile Include="Forms\RessourceForms\RessourcesForm.Designer.cs">
       <DependentUpon>RessourcesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VorgehensmodelForms\VorgehensmodelComboboxItem.cs">
+    <Compile Include="Forms\VorgehensmodelForms\VorgehensmodelComboboxItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AktivitaetenForms\AddAktivitaetenForm.cs">
+    <Compile Include="Forms\AktivitaetenForms\AddAktivitaetenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AktivitaetenForms\AddAktivitaetenForm.Designer.cs">
+    <Compile Include="Forms\AktivitaetenForms\AddAktivitaetenForm.Designer.cs">
       <DependentUpon>AddAktivitaetenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhasenForms\AddPhaseForm.cs">
+    <Compile Include="Forms\PhasenForms\AddPhaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhasenForms\AddPhaseForm.Designer.cs">
+    <Compile Include="Forms\PhasenForms\AddPhaseForm.Designer.cs">
       <DependentUpon>AddPhaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AktivitaetenForms\AktivitaetenForm.cs">
+    <Compile Include="Forms\AktivitaetenForms\AktivitaetenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AktivitaetenForms\AktivitaetenForm.Designer.cs">
+    <Compile Include="Forms\AktivitaetenForms\AktivitaetenForm.Designer.cs">
       <DependentUpon>AktivitaetenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VorgehensmodelForms\VorgehensmodelForm.cs">
+    <Compile Include="Forms\VorgehensmodelForms\VorgehensmodelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VorgehensmodelForms\VorgehensmodelForm.Designer.cs">
+    <Compile Include="Forms\VorgehensmodelForms\VorgehensmodelForm.Designer.cs">
       <DependentUpon>VorgehensmodelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MitarbeiterForms\MitarbeiterForm.cs">
+    <Compile Include="Forms\MitarbeiterForms\MitarbeiterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MitarbeiterForms\MitarbeiterForm.Designer.cs">
+    <Compile Include="Forms\MitarbeiterForms\MitarbeiterForm.Designer.cs">
       <DependentUpon>MitarbeiterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -205,86 +205,86 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VorgehensmodelForms\AddVorgehensmodelForm.cs">
+    <Compile Include="Forms\VorgehensmodelForms\AddVorgehensmodelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VorgehensmodelForms\AddVorgehensmodelForm.Designer.cs">
+    <Compile Include="Forms\VorgehensmodelForms\AddVorgehensmodelForm.Designer.cs">
       <DependentUpon>AddVorgehensmodelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbEnitities\Projekt.cs" />
     <Compile Include="DbEnitities\Vorgehensmodel.cs" />
-    <Compile Include="ProjekteForms\ProjekteForm.cs">
+    <Compile Include="Forms\ProjekteForms\ProjekteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjekteForms\ProjekteForm.Designer.cs">
+    <Compile Include="Forms\ProjekteForms\ProjekteForm.Designer.cs">
       <DependentUpon>ProjekteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PhasenForms\PhasenForm.cs">
+    <Compile Include="Forms\PhasenForms\PhasenForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PhasenForms\PhasenForm.Designer.cs">
+    <Compile Include="Forms\PhasenForms\PhasenForm.Designer.cs">
       <DependentUpon>PhasenForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DokumenteForms\AddDokumenteForm.resx">
+    <EmbeddedResource Include="Forms\DokumenteForms\AddDokumenteForm.resx">
       <DependentUpon>AddDokumenteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DokumenteForms\DokumenteForm.resx">
+    <EmbeddedResource Include="Forms\DokumenteForms\DokumenteForm.resx">
       <DependentUpon>DokumenteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KostenartForms\AddKostenartForm.resx">
+    <EmbeddedResource Include="Forms\KostenartForms\AddKostenartForm.resx">
       <DependentUpon>AddKostenartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KostenartForms\KostenartForm.resx">
+    <EmbeddedResource Include="Forms\KostenartForms\KostenartForm.resx">
       <DependentUpon>KostenartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MeilensteinForms\AddMeilensteinForm.resx">
+    <EmbeddedResource Include="Forms\MeilensteinForms\AddMeilensteinForm.resx">
       <DependentUpon>AddMeilensteinForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MeilensteinForms\MeilensteinForm.resx">
+    <EmbeddedResource Include="Forms\MeilensteinForms\MeilensteinForm.resx">
       <DependentUpon>MeilensteinForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MitarbeiterForms\AddMitarbeiterForm.resx">
+    <EmbeddedResource Include="Forms\MitarbeiterForms\AddMitarbeiterForm.resx">
       <DependentUpon>AddMitarbeiterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjekteForms\CreateProjektWizardForm.resx">
+    <EmbeddedResource Include="Forms\ProjekteForms\CreateProjektWizardForm.resx">
       <DependentUpon>CreateProjektWizardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjekteForms\ProjekteDetailsForm.resx">
+    <EmbeddedResource Include="Forms\ProjekteForms\ProjekteDetailsForm.resx">
       <DependentUpon>ProjekteDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AktivitaetenForms\AddAktivitaetenForm.resx">
+    <EmbeddedResource Include="Forms\AktivitaetenForms\AddAktivitaetenForm.resx">
       <DependentUpon>AddAktivitaetenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhasenForms\AddPhaseForm.resx">
+    <EmbeddedResource Include="Forms\PhasenForms\AddPhaseForm.resx">
       <DependentUpon>AddPhaseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExterneKostenForms\AddExterneKostenForm.resx">
+    <EmbeddedResource Include="Forms\ExterneKostenForms\AddExterneKostenForm.resx">
       <DependentUpon>AddExterneKostenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExterneKostenForms\ExterneKostenForm.resx">
+    <EmbeddedResource Include="Forms\ExterneKostenForms\ExterneKostenForm.resx">
       <DependentUpon>ExterneKostenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RessourceForms\AddRessourceForm.resx">
+    <EmbeddedResource Include="Forms\RessourceForms\AddRessourceForm.resx">
       <DependentUpon>AddRessourceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RessourceForms\RessourcesForm.resx">
+    <EmbeddedResource Include="Forms\RessourceForms\RessourcesForm.resx">
       <DependentUpon>RessourcesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VorgehensmodelForms\VorgehensmodelForm.resx">
+    <EmbeddedResource Include="Forms\VorgehensmodelForms\VorgehensmodelForm.resx">
       <DependentUpon>VorgehensmodelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MitarbeiterForms\MitarbeiterForm.resx">
+    <EmbeddedResource Include="Forms\MitarbeiterForms\MitarbeiterForm.resx">
       <DependentUpon>MitarbeiterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VorgehensmodelForms\AddVorgehensmodelForm.resx">
+    <EmbeddedResource Include="Forms\VorgehensmodelForms\AddVorgehensmodelForm.resx">
       <DependentUpon>AddVorgehensmodelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjekteForms\ProjekteForm.resx">
+    <EmbeddedResource Include="Forms\ProjekteForms\ProjekteForm.resx">
       <DependentUpon>ProjekteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -296,10 +296,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AktivitaetenForms\AktivitaetenForm.resx">
+    <EmbeddedResource Include="Forms\AktivitaetenForms\AktivitaetenForm.resx">
       <DependentUpon>AktivitaetenForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PhasenForms\PhasenForm.resx">
+    <EmbeddedResource Include="Forms\PhasenForms\PhasenForm.resx">
       <DependentUpon>PhasenForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
