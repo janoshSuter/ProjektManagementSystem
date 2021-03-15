@@ -25,6 +25,7 @@ namespace ProjektManagementSystem.ExterneKostenForms
             editMode = editmode;
             InitializeComponent();
             loadKostenartToComboBox();
+            KostenGeplantTextBox.Enabled = !editMode;
         }
 
         private void loadKostenartToComboBox()

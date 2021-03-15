@@ -39,6 +39,8 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             ressourceEditButton.Visible = editMode;
             kostenEditButton.Visible = editMode;
             linkLabel1.Visible = editMode;
+            EnddatumGeplantDatePicker.Enabled = !editMode;
+            StartdatumGeplantDatePicker.Enabled = !editMode;
             ressourcenLabelUpdate();
             externeKostenLabelUpdate();
         }
