@@ -72,7 +72,7 @@ namespace ProjektManagementSystem
         {
             if (addMeilensteinForm.DialogResult == DialogResult.OK)
             {
-                if (addMeilensteinForm.BezeichnungTextBox.Text.Length > 2)
+                if (addMeilensteinForm.BezeichnungTextBox.Text.Length > 1)
                 {
                     //Connect auf Tabelle inkl. dem Mapping
                     Table<Meilenstein> meilensteinTableDefinition = dbContext.GetTable<Meilenstein>();
@@ -92,6 +92,9 @@ namespace ProjektManagementSystem
 
                     // datagrid neu befüllen
                     loadMeilensteinDataGrid();
+                } else
+                {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

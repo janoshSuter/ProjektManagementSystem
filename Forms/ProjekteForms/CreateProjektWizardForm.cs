@@ -131,6 +131,7 @@ namespace ProjektManagementSystem.ProjekteForms
         {
             Vorgehensmodel model = (VorgehensmodelComboBox.SelectedItem as VorgehensmodelComboboxItem).Value;
             vorgehensmodelBeschreibunglbl.Text = model.beschreibung;
+            wizardPage2.AllowNext = true;
         }
         public TextBox ProjektnameTextBox { get => projektnameTextBox; set => projektnameTextBox = value; }
         public DateTimePicker EnddatumGeplantDateTimePicker { get => enddatumGeplantDateTimePicker; set => enddatumGeplantDateTimePicker = value; }

@@ -135,7 +135,7 @@ namespace ProjektManagementSystem
         {
             if (addVorgehensmodelForm.DialogResult == DialogResult.OK)
             {
-                if (addVorgehensmodelForm.getNameTextBox().Text.Length > 2 && !addVorgehensmodelForm.getBeschreibungTextBox().Text.Equals(""))
+                if (addVorgehensmodelForm.getNameTextBox().Text.Length > 1)
                 {
                     //Connect auf Tabelle inkl. dem Mapping
                     Table<Vorgehensmodel> vorgensmodelTableDefinition = dbContext.GetTable<Vorgehensmodel>();
@@ -154,6 +154,9 @@ namespace ProjektManagementSystem
 
                     // datagrid neu befüllen
                     loadVorgehensmodelDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

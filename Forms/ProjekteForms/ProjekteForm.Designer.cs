@@ -44,7 +44,6 @@ namespace ProjektManagementSystem
             this.deleteProjektButton = new System.Windows.Forms.Button();
             this.buchAuslesenButton = new System.Windows.Forms.Button();
             this.addProjektButton = new System.Windows.Forms.Button();
-            this.addVorgehensmodelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.projekteDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,16 +177,6 @@ namespace ProjektManagementSystem
             this.addProjektButton.UseVisualStyleBackColor = true;
             this.addProjektButton.Click += new System.EventHandler(this.addProjektButton_Click);
             // 
-            // addVorgehensmodelButton
-            // 
-            this.addVorgehensmodelButton.Location = new System.Drawing.Point(555, 376);
-            this.addVorgehensmodelButton.Name = "addVorgehensmodelButton";
-            this.addVorgehensmodelButton.Size = new System.Drawing.Size(194, 48);
-            this.addVorgehensmodelButton.TabIndex = 18;
-            this.addVorgehensmodelButton.Text = "Neues Vorgensmoel erfassen";
-            this.addVorgehensmodelButton.UseVisualStyleBackColor = true;
-            this.addVorgehensmodelButton.Click += new System.EventHandler(this.addVorgehensmodelButton_Click);
-            // 
             // ProjekteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,7 +184,6 @@ namespace ProjektManagementSystem
             this.ClientSize = new System.Drawing.Size(1252, 541);
             this.Controls.Add(this.deleteProjektButton);
             this.Controls.Add(this.buchAuslesenButton);
-            this.Controls.Add(this.addVorgehensmodelButton);
             this.Controls.Add(this.addProjektButton);
             this.Controls.Add(this.projekteDataGridView);
             this.MaximumSize = new System.Drawing.Size(1268, 580);
@@ -214,7 +202,6 @@ namespace ProjektManagementSystem
         private System.Windows.Forms.Button deleteProjektButton;
         private System.Windows.Forms.Button buchAuslesenButton;
         private System.Windows.Forms.Button addProjektButton;
-        private System.Windows.Forms.Button addVorgehensmodelButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TitelColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBeschreibung;

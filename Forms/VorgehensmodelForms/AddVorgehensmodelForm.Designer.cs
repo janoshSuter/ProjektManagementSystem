@@ -73,9 +73,9 @@ namespace ProjektManagementSystem
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(13, 15);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(38, 13);
+            this.labelName.Size = new System.Drawing.Size(42, 13);
             this.labelName.TabIndex = 7;
-            this.labelName.Text = "Name:";
+            this.labelName.Text = "*Name:";
             // 
             // beschreibungTextBox
             // 

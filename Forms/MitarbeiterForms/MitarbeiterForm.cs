@@ -74,9 +74,8 @@ namespace ProjektManagementSystem
             if (addMitarbeiterForm.DialogResult == DialogResult.OK)
             {
                 if (addMitarbeiterForm.getVornameTextBox().Text.Length > 2 && !addMitarbeiterForm.getVornameTextBox().Text.Equals("")
-                    && addMitarbeiterForm.getAbteilungTextBox().Text.Length > 2 && !addMitarbeiterForm.getAbteilungTextBox().Text.Equals("")
+                    && addMitarbeiterForm.getAbteilungTextBox().Text.Length > 1 && !addMitarbeiterForm.getAbteilungTextBox().Text.Equals("")
                     && addMitarbeiterForm.getNachnameTextBox().Text.Length > 2 && !addMitarbeiterForm.getNachnameTextBox().Text.Equals("")
-                    && addMitarbeiterForm.getFunktionsbeschreibungTextBox().Text.Length > 2 && !addMitarbeiterForm.getFunktionsbeschreibungTextBox().Text.Equals("")
                     && !addMitarbeiterForm.getArbeitspesnumTextBox().Text.Equals(""))
                 {
                     //Connect auf Tabelle inkl. dem Mapping
@@ -102,6 +101,9 @@ namespace ProjektManagementSystem
 
                     // datagrid neu befüllen
                     loadMitarbeiterDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

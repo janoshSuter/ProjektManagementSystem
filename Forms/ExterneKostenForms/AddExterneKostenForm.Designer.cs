@@ -103,9 +103,9 @@ namespace ProjektManagementSystem.ExterneKostenForms
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(379, 25);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Kosten geplant:";
+            this.label4.Text = "*Kosten geplant:";
             // 
             // kostenGeplantTextBox
             // 

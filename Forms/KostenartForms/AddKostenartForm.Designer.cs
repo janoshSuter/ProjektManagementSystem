@@ -44,10 +44,10 @@ namespace ProjektManagementSystem
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // textBoxName
+            // bezeichnungTextBox
             // 
             this.bezeichnungTextBox.Location = new System.Drawing.Point(95, 12);
-            this.bezeichnungTextBox.Name = "textBoxName";
+            this.bezeichnungTextBox.Name = "bezeichnungTextBox";
             this.bezeichnungTextBox.Size = new System.Drawing.Size(173, 20);
             this.bezeichnungTextBox.TabIndex = 9;
             // 
@@ -56,9 +56,9 @@ namespace ProjektManagementSystem
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(13, 15);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(69, 13);
+            this.labelName.Size = new System.Drawing.Size(73, 13);
             this.labelName.TabIndex = 7;
-            this.labelName.Text = "Bezeichnung";
+            this.labelName.Text = "*Bezeichnung";
             // 
             // AddKostenartForm
             // 
