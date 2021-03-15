@@ -70,27 +70,27 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bezeichnung";
+            this.label1.Text = "*Bezeichnung";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 13);
+            this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Phasenfortschritt (in %)";
+            this.label2.Text = "*Phasenfortschritt (in %)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(384, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(75, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Phasenstatus";
+            this.label3.Text = "*Phasenstatus";
             // 
             // label4
             // 
@@ -106,9 +106,9 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 13);
+            this.label5.Size = new System.Drawing.Size(102, 13);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Startdatum Geplant";
+            this.label5.Text = "*Startdatum Geplant";
             // 
             // label6
             // 
@@ -124,18 +124,18 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(13, 136);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.Size = new System.Drawing.Size(99, 13);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Enddatum Geplant";
+            this.label7.Text = "*Enddatum Geplant";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(13, 171);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 13);
+            this.label8.Size = new System.Drawing.Size(116, 13);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Reviewdatum Geplant";
+            this.label8.Text = "*Reviewdatum Geplant";
             // 
             // label9
             // 
@@ -333,11 +333,11 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.editMeilensteineButton.UseVisualStyleBackColor = true;
             this.editMeilensteineButton.Click += new System.EventHandler(this.editMeilensteinenButton_Click);
             // 
-            // linkLabel1
+            // linkLabelDokumente
             // 
             this.linkLabelDokumente.AutoSize = true;
             this.linkLabelDokumente.Location = new System.Drawing.Point(381, 212);
-            this.linkLabelDokumente.Name = "linkLabel1";
+            this.linkLabelDokumente.Name = "linkLabelDokumente";
             this.linkLabelDokumente.Size = new System.Drawing.Size(142, 13);
             this.linkLabelDokumente.TabIndex = 20;
             this.linkLabelDokumente.TabStop = true;

@@ -68,7 +68,7 @@ namespace ProjektManagementSystem
         {
             if (addKostenartForm.DialogResult == DialogResult.OK)
             {
-                if (addKostenartForm.getBezeichnungTextBox().Text.Length > 2 && !addKostenartForm.getBezeichnungTextBox().Text.Equals(""))
+                if (addKostenartForm.getBezeichnungTextBox().Text.Length > 1 && !addKostenartForm.getBezeichnungTextBox().Text.Equals(""))
                 {
                     //Connect auf Tabelle inkl. dem Mapping
                     Table<Kostenart> kostenartTableDefinition = dbContext.GetTable<Kostenart>();
@@ -86,6 +86,9 @@ namespace ProjektManagementSystem
 
                     // datagrid neu befüllen
                     loadKostenartDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

@@ -88,7 +88,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             {
                 if (addPhaseForm.BezeichnungTextBox.Text.Length > 2 && !addPhaseForm.BezeichnungTextBox.Text.Equals("") &&
                     addPhaseForm.PhasenFortschrittTextBox.Text.Length >= 1 && !addPhaseForm.PhasenFortschrittTextBox.Text.Equals("") &&
-                    addPhaseForm.StatusTextBox.Text.Length > 2 && !addPhaseForm.StatusTextBox.Text.Equals("") &&
+                    addPhaseForm.StatusTextBox.Text.Length > 1 && !addPhaseForm.StatusTextBox.Text.Equals("") &&
                     addPhaseForm.StartdatumGeplantDatePicker.Text.Length > 2 && !addPhaseForm.StartdatumGeplantDatePicker.Text.Equals("") &&
                     addPhaseForm.EnddatumGeplantDatePicker.Text.Length > 2 && !addPhaseForm.EnddatumGeplantDatePicker.Text.Equals("") &&
                     addPhaseForm.ReviewdatumGeplantDatePicker.Text.Length > 2 && !addPhaseForm.ReviewdatumGeplantDatePicker.Text.Equals(""))
@@ -105,7 +105,8 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     DateTime reviewdatumGeplant = addPhaseForm.ReviewdatumGeplantDatePicker.Value;
 
                     DateTime? freigabedatum = null;
-                    if (addPhaseForm.FreigabedatumDatePicker.Enabled) {
+                    if (addPhaseForm.FreigabedatumDatePicker.Enabled)
+                    {
                         freigabedatum = addPhaseForm.FreigabedatumDatePicker.Value;
                     }
 
@@ -146,6 +147,9 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
                     // datagrid neu befüllen
                     loadPhasenDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

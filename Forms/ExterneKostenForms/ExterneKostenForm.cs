@@ -80,10 +80,7 @@ namespace ProjektManagementSystem.ExterneKostenForms
         {
             if (!addExterneKostenForm.editMode && addExterneKostenForm.DialogResult == DialogResult.OK)
             {
-                if (!addExterneKostenForm.AbweichungsgrundTextBox.Text.Equals("") &&
-                    !addExterneKostenForm.KostenEffektivTextBox.Text.Equals("") &&
-                    addExterneKostenForm.KostenGeplantTextBox.Text.Length >= 1 &&
-                    addExterneKostenForm.KostenEffektivTextBox.Text.Length >= 1)
+                if (addExterneKostenForm.KostenGeplantTextBox.Text.Length >= 1)
                 {
                     //Connect auf Tabelle inkl. dem Mapping
                     Table<ExterneKosten> ressourceTableDefinition = dbContext.GetTable<ExterneKosten>();
@@ -92,7 +89,7 @@ namespace ProjektManagementSystem.ExterneKostenForms
                     string abweichungsgrund = addExterneKostenForm.AbweichungsgrundTextBox.Text;
                     decimal geplanteKosten = Decimal.Parse(addExterneKostenForm.KostenGeplantTextBox.Text);
                     decimal effektivKosten = Decimal.Parse(addExterneKostenForm.KostenEffektivTextBox.Text);
-                    int kostenartId = ((KostenartComboboxItem) addExterneKostenForm.KostenartComboBox.SelectedItem).Value.kostenartId;
+                    int kostenartId = ((KostenartComboboxItem)addExterneKostenForm.KostenartComboBox.SelectedItem).Value.kostenartId;
 
                     ExterneKosten exteneKosten = new ExterneKosten();
                     exteneKosten.abweichungsbegruendung = abweichungsgrund;
@@ -108,6 +105,9 @@ namespace ProjektManagementSystem.ExterneKostenForms
 
                     // datagrid neu befüllen
                     loadExterneKostenDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

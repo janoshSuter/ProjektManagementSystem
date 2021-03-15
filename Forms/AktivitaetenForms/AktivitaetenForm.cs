@@ -107,10 +107,10 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         {
             if (addAktivitaetenForm.DialogResult == DialogResult.OK)
             {
-                if (addAktivitaetenForm.BeschreibungTextBox.Text.Length > 2 && !addAktivitaetenForm.BeschreibungTextBox.Text.Equals("")
-                    && addAktivitaetenForm.StartdatumGeplantDatePicker.Text.Length > 2 && !addAktivitaetenForm.StartdatumGeplantDatePicker.Text.Equals("")
-                    && addAktivitaetenForm.EnddatumGeplantDatePicker.Text.Length > 2 && !addAktivitaetenForm.EnddatumGeplantDatePicker.Text.Equals("")
-                    && addAktivitaetenForm.VerantwortlicherComboBox.Text.Length > 2 && !addAktivitaetenForm.VerantwortlicherComboBox.Text.Equals(""))
+                if (addAktivitaetenForm.BeschreibungTextBox.Text.Length > 1 && !addAktivitaetenForm.BeschreibungTextBox.Text.Equals("")
+                    && addAktivitaetenForm.StartdatumGeplantDatePicker.Text.Length > 1 && !addAktivitaetenForm.StartdatumGeplantDatePicker.Text.Equals("")
+                    && addAktivitaetenForm.EnddatumGeplantDatePicker.Text.Length > 1 && !addAktivitaetenForm.EnddatumGeplantDatePicker.Text.Equals("")
+                    && addAktivitaetenForm.VerantwortlicherComboBox.Text.Length > 1 && !addAktivitaetenForm.VerantwortlicherComboBox.Text.Equals(""))
                 {
                     //Connect auf Tabelle inkl. dem Mapping
                     Table<Aktivitaet> aktivitaetTableDefinition = dbContext.GetTable<Aktivitaet>();
@@ -141,6 +141,9 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     dbContext.SubmitChanges();
 
                     loadAktivitaetenDataGrid();
+                }
+                else {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

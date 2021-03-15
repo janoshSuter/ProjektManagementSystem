@@ -112,6 +112,9 @@ namespace ProjektManagementSystem.RessourceForms
 
                     // datagrid neu befüllen
                     loadRessourcenDataGrid();
+                } else
+                {
+                    MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
         }

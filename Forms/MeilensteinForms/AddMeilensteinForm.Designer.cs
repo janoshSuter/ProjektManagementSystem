@@ -62,18 +62,18 @@ namespace ProjektManagementSystem
             this.labelName.AutoSize = true;
             this.labelName.Location = new System.Drawing.Point(13, 15);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(69, 13);
+            this.labelName.Size = new System.Drawing.Size(73, 13);
             this.labelName.TabIndex = 7;
-            this.labelName.Text = "Bezeichnung";
+            this.labelName.Text = "*Bezeichnung";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Abschlussdatum";
+            this.label1.Text = "*Abschlussdatum";
             // 
             // abschlussdatumDateTime
             // 
@@ -92,11 +92,11 @@ namespace ProjektManagementSystem
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // linkLabel1
+            // linkLabelDokumente
             // 
             this.linkLabelDokumente.AutoSize = true;
             this.linkLabelDokumente.Location = new System.Drawing.Point(13, 88);
-            this.linkLabelDokumente.Name = "linkLabel1";
+            this.linkLabelDokumente.Name = "linkLabelDokumente";
             this.linkLabelDokumente.Size = new System.Drawing.Size(159, 13);
             this.linkLabelDokumente.TabIndex = 18;
             this.linkLabelDokumente.TabStop = true;
