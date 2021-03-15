@@ -12,7 +12,7 @@ namespace ProjektManagementSystem
     [Table(Name = "ExterneKosten")]
     public class ExterneKosten
     {
-        //Mapper auf Primary Key
+        //Mapper auf Primary Key 
         [Column(Name = "ExterneKostenId", IsDbGenerated = true, IsPrimaryKey = true, UpdateCheck = UpdateCheck.Never)]
         public int externeKostenId
         {
