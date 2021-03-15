@@ -14,11 +14,13 @@ namespace ProjektManagementSystem
     public partial class VorgehensmodelForm : Form
     {
         DataContext dbContext;
+        private string savePath;
         AddVorgehensmodelForm addVorgehensmodelForm;
 
-        public VorgehensmodelForm(DataContext dbcontext, string savePath)
+        public VorgehensmodelForm(DataContext dbcontext, string userSavePath)
         {
             dbContext = dbcontext;
+            savePath = userSavePath;
             InitializeComponent();
             loadVorgehensmodelDataGrid();
         }
@@ -59,7 +61,7 @@ namespace ProjektManagementSystem
 
         private void addVorgehensmodelButton_Click(object sender, EventArgs e)
         {
-            addVorgehensmodelForm = new AddVorgehensmodelForm(dbContext, false);
+            addVorgehensmodelForm = new AddVorgehensmodelForm(dbContext, "", false);
             addVorgehensmodelForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.vorgehensmodelForm_FormClosing);
             addVorgehensmodelForm.ShowDialog();
         }
@@ -106,7 +108,7 @@ namespace ProjektManagementSystem
             if (zu_vorgehensmodel.Any()) {
                 Vorgehensmodel vorgehensmodel = zu_vorgehensmodel.First().vorgehensmodel;
                 //open edit Dialog -> ein element editieren
-                addVorgehensmodelForm = new AddVorgehensmodelForm(dbContext, true);
+                addVorgehensmodelForm = new AddVorgehensmodelForm(dbContext, savePath, true);
                 addVorgehensmodelForm.activeVorgehensmodelId = vorgehensmodel.vorgehensmodelId;
                 addVorgehensmodelForm.TextBoxName.Text = vorgehensmodel.name;
                 addVorgehensmodelForm.BeschreibungTextBox.Text = vorgehensmodel.beschreibung;

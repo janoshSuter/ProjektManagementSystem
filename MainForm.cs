@@ -15,7 +15,7 @@ namespace ProjektManagementSystem
     public partial class MainForm : Form
     {
         DataContext dbContext;
-        string savePath = "Save Files Here";
+        string savePath = "";
 
         public MainForm()
         {
@@ -36,7 +36,7 @@ namespace ProjektManagementSystem
 
         private void projekteButton_Click(object sender, EventArgs e)
         {
-            ProjekteForm projekteForm = new ProjekteForm(dbContext);
+            ProjekteForm projekteForm = new ProjekteForm(dbContext, savePath);
             projekteForm.ShowDialog();
         }
 
@@ -64,8 +64,9 @@ namespace ProjektManagementSystem
             if (sf.ShowDialog() == DialogResult.OK)
             {
                 // Now here's our save folder
-                savePath = Path.GetDirectoryName(sf.SelectedPath);
-
+                savePath = sf.SelectedPath + "\\";
+                MessageBox.Show("Sharepath erfolgreich gesetzt");
+                pathButton.Text = "Share-Verzeichnispfad setzen\n(Active Path: " + savePath + ")";
             }
         }
     }

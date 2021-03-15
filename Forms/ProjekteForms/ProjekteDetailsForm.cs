@@ -13,11 +13,13 @@ namespace ProjektManagementSystem
         DataContext dbContext;
         internal int projektId;
         DokumenteForm dokumenteForm;
+        private string savePath;
 
-        public ProjekteDetailsForm(DataContext dbcontext, int projektid)
+        public ProjekteDetailsForm(DataContext dbcontext, string userSavePath, int projektid)
         {
             dbContext = dbcontext;
             this.projektId = projektid;
+            savePath = userSavePath;
             InitializeComponent();
             loadVorgehensmodeleToComboBox();
             loadMitarbeiterToComboBox();
@@ -150,7 +152,7 @@ namespace ProjektManagementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            dokumenteForm = new DokumenteForm(dbContext, -1, -1, projektId, -1);
+            dokumenteForm = new DokumenteForm(dbContext, savePath, -1, -1, projektId, -1);
             dokumenteForm.ShowDialog();
         }
     }

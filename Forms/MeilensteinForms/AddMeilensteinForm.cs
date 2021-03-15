@@ -18,13 +18,15 @@ namespace ProjektManagementSystem
         private bool editMode;
         private readonly int meilensteinId;
         private DokumenteForm dokumenteForm;
+        private string savePath;
 
-        public AddMeilensteinForm(DataContext dbcontext, bool editmode, int meilensteinid)
+        public AddMeilensteinForm(DataContext dbcontext,string usersavepath, bool editmode, int meilensteinid)
         {
             InitializeComponent();
             dbContext = dbcontext;
             editMode = editmode;
             meilensteinId = meilensteinid;
+            savePath = usersavepath;
             upateUi();
         }
 
@@ -50,7 +52,7 @@ namespace ProjektManagementSystem
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            dokumenteForm = new DokumenteForm(dbContext, -1, -1, -1, meilensteinId);
+            dokumenteForm = new DokumenteForm(dbContext, savePath, -1, -1, -1, meilensteinId);
             dokumenteForm.ShowDialog();
         }
     }

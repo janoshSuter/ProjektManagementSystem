@@ -20,12 +20,14 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         DataContext dbContext;
         internal int phaseId;
         public bool editMode;
+        private string savePath;
 
-        public AddPhaseForm(DataContext dbcontext, bool editmode, int phaseid)
+        public AddPhaseForm(DataContext dbcontext, bool editmode, string userSavePath, int phaseid)
         {
             dbContext = dbcontext;
             phaseId = phaseid;
             editMode = editmode;
+            savePath = userSavePath;
             InitializeComponent();
             updateUi();
         }
@@ -55,14 +57,14 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         private void editAktivitaetenButton_Click(object sender, EventArgs e)
         {
-            aktivitaetenForm = new AktivitaetenForm(dbContext, phaseId);
+            aktivitaetenForm = new AktivitaetenForm(dbContext, savePath, phaseId);
             aktivitaetenForm.ShowDialog();
             updateUi();
         }
         
         private void editMeilensteinenButton_Click(object sender, EventArgs e)
         {
-            meilensteinForm = new MeilensteinForm(dbContext, phaseId);
+            meilensteinForm = new MeilensteinForm(dbContext, "", phaseId);
             meilensteinForm.ShowDialog();
             updateUi();
         }
@@ -171,7 +173,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            dokumenteForm = new DokumenteForm(dbContext, -1,  phaseId, -1, -1);
+            dokumenteForm = new DokumenteForm(dbContext, savePath, -1,  phaseId, -1, -1);
             dokumenteForm.ShowDialog();
         }
     }

@@ -23,13 +23,15 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         DataContext dbContext;
         Boolean editMode;
         internal int aktvitaetId;
+        private string savePath;
 
-        public AddAktivitaetenForm(DataContext dbcontext, Boolean editmode, int aktvitaetid)
+        public AddAktivitaetenForm(DataContext dbcontext, Boolean editmode, string usersavepath, int aktvitaetid)
         {
             InitializeComponent();
             dbContext = dbcontext;
             editMode = editmode;
             aktvitaetId = aktvitaetid;
+            savePath = usersavepath;
             loadMitarbeiterToComboBox();
             updateUi();
         }
@@ -182,7 +184,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            dokumenteForm = new DokumenteForm(dbContext, aktvitaetId, -1, -1, -1);
+            dokumenteForm = new DokumenteForm(dbContext, savePath, aktvitaetId, -1, -1, -1);
             dokumenteForm.ShowDialog();
 
             updateUi();

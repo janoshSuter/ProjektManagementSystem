@@ -13,13 +13,15 @@ namespace ProjektManagementSystem
         AddVorgehensmodelForm vorgehensmodelForm;
         ProjekteDetailsForm projektDetailsForm;
         DataContext dbContext;
+        private string savePath;
         CreateProjektWizardForm projektWizard;
 
         const string dateFormat = "dd.MM.yyyy";
 
-        public ProjekteForm(DataContext dbcontext)
+        public ProjekteForm(DataContext dbcontext, string userSavePath)
         {
             dbContext = dbcontext;
+            this.savePath = userSavePath;
             InitializeComponent();
             loadProjekteDataGrid();
         }
@@ -70,7 +72,7 @@ namespace ProjektManagementSystem
 
         private void addVorgehensmodelButton_Click(object sender, EventArgs e)
         {
-            vorgehensmodelForm = new AddVorgehensmodelForm(dbContext, false);
+            vorgehensmodelForm = new AddVorgehensmodelForm(dbContext, savePath, false);
             vorgehensmodelForm.ShowDialog();
 
             if (vorgehensmodelForm.getNameTextBox().Text.Length > 2 && !vorgehensmodelForm.getBeschreibungTextBox().Text.Equals(""))
@@ -149,7 +151,7 @@ namespace ProjektManagementSystem
                 Table<Mitarbeiter> my_joinMitarbeiter = dbContext.GetTable<Mitarbeiter>();
                 int projektid = Int32.Parse(projekteDataGridView.SelectedRows[0].Cells[0].Value.ToString());
 
-                projektDetailsForm = new ProjekteDetailsForm(dbContext, projektid);
+                projektDetailsForm = new ProjekteDetailsForm(dbContext, savePath, projektid);
                 projektDetailsForm.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.projektDetailsForm_FormClosing);
 
                 //Auswerten der typisierten Liste
