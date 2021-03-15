@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C50D1820-D902-447C-8C0D-0CE6B9D369E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjektManagementSystem</RootNamespace>
+    <AssemblyName>ProjektManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AeroWizard, Version=2.2.9.0, Culture=neutral, PublicKeyToken=915e74f5d64b8f37, processorArchitecture=MSIL">
+      <HintPath>packages\AeroWizard.2.2.9\lib\net45\AeroWizard.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.50.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.50.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.50.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.50.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.50.0.2250, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Drive.v3.1.50.0.2250\lib\net45\Google.Apis.Drive.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.50.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.50.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbEnitities\Dokument.cs" />
+    <Compile Include="DbEnitities\Kostenart.cs" />
+    <Compile Include="DbEnitities\Mitarbeiter.cs" />
+    <Compile Include="DbEnitities\Aktivitaet.cs" />
+    <Compile Include="DbEnitities\Phase.cs" />
+    <Compile Include="DbEnitities\ExterneKosten.cs" />
+    <Compile Include="DbEnitities\Ressource.cs" />
+    <Compile Include="DbEnitities\Vorgehensmodel_PhaseId.cs" />
+    <Compile Include="DokumenteForms\DokumenteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DokumenteForms\DokumenteForm.Designer.cs">
+      <DependentUpon>DokumenteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DokumenteForms\AddDokumenteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DokumenteForms\AddDokumenteForm.Designer.cs">
+      <DependentUpon>AddDokumenteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KostenartForms\AddKostenartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KostenartForms\AddKostenartForm.Designer.cs">
+      <DependentUpon>AddKostenartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KostenartForms\KostenartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KostenartForms\KostenartForm.Designer.cs">
+      <DependentUpon>KostenartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbEnitities\Meilenstein.cs" />
+    <Compile Include="KostenartForms\KostenartComboboxItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeilensteinForms\AddMeilensteinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeilensteinForms\AddMeilensteinForm.Designer.cs">
+      <DependentUpon>AddMeilensteinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeilensteinForms\MeilensteinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeilensteinForms\MeilensteinForm.Designer.cs">
+      <DependentUpon>MeilensteinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterForms\AddMitarbeiterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterForms\AddMitarbeiterForm.Designer.cs">
+      <DependentUpon>AddMitarbeiterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjekteForms\CreateProjektWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjekteForms\CreateProjektWizardForm.Designer.cs">
+      <DependentUpon>CreateProjektWizardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterForms\MitarbeiterComboboxItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjekteForms\ProjekteDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjekteForms\ProjekteDetailsForm.Designer.cs">
+      <DependentUpon>ProjekteDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExterneKostenForms\AddExterneKostenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExterneKostenForms\AddExterneKostenForm.Designer.cs">
+      <DependentUpon>AddExterneKostenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExterneKostenForms\ExterneKostenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExterneKostenForms\ExterneKostenForm.Designer.cs">
+      <DependentUpon>ExterneKostenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RessourceForms\AddRessourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RessourceForms\AddRessourceForm.Designer.cs">
+      <DependentUpon>AddRessourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RessourceForms\RessourcesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RessourceForms\RessourcesForm.Designer.cs">
+      <DependentUpon>RessourcesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VorgehensmodelForms\VorgehensmodelComboboxItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AktivitaetenForms\AddAktivitaetenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AktivitaetenForms\AddAktivitaetenForm.Designer.cs">
+      <DependentUpon>AddAktivitaetenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhasenForms\AddPhaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhasenForms\AddPhaseForm.Designer.cs">
+      <DependentUpon>AddPhaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AktivitaetenForms\AktivitaetenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AktivitaetenForms\AktivitaetenForm.Designer.cs">
+      <DependentUpon>AktivitaetenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VorgehensmodelForms\VorgehensmodelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VorgehensmodelForms\VorgehensmodelForm.Designer.cs">
+      <DependentUpon>VorgehensmodelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MitarbeiterForms\MitarbeiterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MitarbeiterForms\MitarbeiterForm.Designer.cs">
+      <DependentUpon>MitarbeiterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VorgehensmodelForms\AddVorgehensmodelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VorgehensmodelForms\AddVorgehensmodelForm.Designer.cs">
+      <DependentUpon>AddVorgehensmodelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbEnitities\Projekt.cs" />
+    <Compile Include="DbEnitities\Vorgehensmodel.cs" />
+    <Compile Include="ProjekteForms\ProjekteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjekteForms\ProjekteForm.Designer.cs">
+      <DependentUpon>ProjekteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PhasenForms\PhasenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhasenForms\PhasenForm.Designer.cs">
+      <DependentUpon>PhasenForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DokumenteForms\AddDokumenteForm.resx">
+      <DependentUpon>AddDokumenteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DokumenteForms\DokumenteForm.resx">
+      <DependentUpon>DokumenteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KostenartForms\AddKostenartForm.resx">
+      <DependentUpon>AddKostenartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KostenartForms\KostenartForm.resx">
+      <DependentUpon>KostenartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeilensteinForms\AddMeilensteinForm.resx">
+      <DependentUpon>AddMeilensteinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeilensteinForms\MeilensteinForm.resx">
+      <DependentUpon>MeilensteinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterForms\AddMitarbeiterForm.resx">
+      <DependentUpon>AddMitarbeiterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjekteForms\CreateProjektWizardForm.resx">
+      <DependentUpon>CreateProjektWizardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjekteForms\ProjekteDetailsForm.resx">
+      <DependentUpon>ProjekteDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AktivitaetenForms\AddAktivitaetenForm.resx">
+      <DependentUpon>AddAktivitaetenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhasenForms\AddPhaseForm.resx">
+      <DependentUpon>AddPhaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExterneKostenForms\AddExterneKostenForm.resx">
+      <DependentUpon>AddExterneKostenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExterneKostenForms\ExterneKostenForm.resx">
+      <DependentUpon>ExterneKostenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RessourceForms\AddRessourceForm.resx">
+      <DependentUpon>AddRessourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RessourceForms\RessourcesForm.resx">
+      <DependentUpon>RessourcesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VorgehensmodelForms\VorgehensmodelForm.resx">
+      <DependentUpon>VorgehensmodelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MitarbeiterForms\MitarbeiterForm.resx">
+      <DependentUpon>MitarbeiterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VorgehensmodelForms\AddVorgehensmodelForm.resx">
+      <DependentUpon>AddVorgehensmodelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjekteForms\ProjekteForm.resx">
+      <DependentUpon>ProjekteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AktivitaetenForms\AktivitaetenForm.resx">
+      <DependentUpon>AktivitaetenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhasenForms\PhasenForm.resx">
+      <DependentUpon>PhasenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
