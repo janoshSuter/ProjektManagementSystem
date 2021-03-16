@@ -319,5 +319,9 @@
   <ItemGroup>
     <Folder Include="Tests\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DbScripts\1_CreatePMSDB.sql" />
+    <Content Include="DbScripts\2_PMSDB_Schema_and_Data.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
