@@ -87,7 +87,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         {
             if (!addPhaseForm.editMode && addPhaseForm.DialogResult == DialogResult.OK)
             {
-                if (addPhaseForm.BezeichnungTextBox.Text.Length > 2 && !addPhaseForm.BezeichnungTextBox.Text.Equals("") &&
+                if (addPhaseForm.BezeichnungTextBox.Text.Length > 1 && !addPhaseForm.BezeichnungTextBox.Text.Equals("") &&
                     addPhaseForm.PhasenFortschrittTextBox.Text.Length >= 1 && !addPhaseForm.PhasenFortschrittTextBox.Text.Equals("") &&
                     addPhaseForm.StatusTextBox.Text.Length > 1 && !addPhaseForm.StatusTextBox.Text.Equals("") &&
                     addPhaseForm.StartdatumGeplantDatePicker.Text.Length > 2 && !addPhaseForm.StartdatumGeplantDatePicker.Text.Equals("") &&
@@ -145,6 +145,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     dbContext.SubmitChanges();
 
                     updateVorgehensmodelPhaseReference(phase.phaseId);
+                    addDefaultMeilensteinForPhase(phase.phaseId);
 
                     // datagrid neu befüllen
                     loadPhasenDataGrid();
@@ -153,6 +154,19 @@ namespace ProjektManagementSystem.VorgehensmodelForms
                     MessageBox.Show("Es wurden nicht alle Pflichtfelder ausgefüllt! (Diese sind mit * versehen)");
                 }
             }
+        }
+
+        private void addDefaultMeilensteinForPhase(int phaseId)
+        {
+            Table<Meilenstein> meilensteinTableDefinition = dbContext.GetTable<Meilenstein>();
+
+            Meilenstein defaultMeilenstein = new Meilenstein();
+            defaultMeilenstein.bezeichnung = "StartPhase";
+            defaultMeilenstein.abschlussdatum = DateTime.Now;
+            defaultMeilenstein.phaseId = phaseId;
+
+            meilensteinTableDefinition.InsertOnSubmit(defaultMeilenstein);
+            dbContext.SubmitChanges();
         }
 
         private void updateVorgehensmodelPhaseReference(int phaseId)
