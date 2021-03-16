@@ -75,13 +75,15 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             aktivitaetenTitelLabel.Visible = editMode;
             editMeilensteineButton.Visible = editMode;
             meilensteineLabel.Visible = editMode;
+            meilensteinTitelLabel.Visible = editMode;
+            aktivitaetenLabel.Visible = editMode;
             linkLabelDokumente.Visible = editMode;
             StartdatumGeplantDatePicker.Enabled = !editMode;
             EnddatumGeplantDatePicker.Enabled = !editMode;
             ReviewdatumGeplantDatePicker.Enabled = !editMode;
             if (!editMode)
             {
-                aktivitaetenTitelLbl.Text = "Die Aktivitäten können später der Phase hinzugefügt werden";
+                aktivitaetenLabel.Text = "Die Aktivitäten können später der Phase hinzugefügt werden";
                 setEmptyCustomDatePicker(StartdatumEffektivDatePicker);
                 setEmptyCustomDatePicker(EnddatumEffektivDatePicker);
                 setEmptyCustomDatePicker(ReviewdatumEffektivDatePicker);
@@ -168,7 +170,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         public DateTimePicker ReviewdatumEffektivDatePicker { get => reviewdatumEffektivDatePicker; set => reviewdatumEffektivDatePicker = value; }
         public DateTimePicker ReviewdatumGeplantDatePicker { get => reviewdatumGeplantDatePicker; set => reviewdatumGeplantDatePicker = value; }
         public DateTimePicker FreigabedatumDatePicker { get => freigabedatumDatePicker; set => freigabedatumDatePicker = value; }
-        public Label AktivitaetLabel { get => aktivitaetenTitelLbl; set => aktivitaetenTitelLbl = value; }
+        public Label AktivitaetLabel { get => aktivitaetenLabel; set => aktivitaetenLabel = value; }
         public Label MeilensteineLabel { get => meilensteineLabel; set => meilensteineLabel = value; }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

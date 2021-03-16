@@ -42,7 +42,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.aktivitaetenTitelLabel = new System.Windows.Forms.Label();
-            this.aktivitaetenTitelLbl = new System.Windows.Forms.Label();
+            this.aktivitaetenLabel = new System.Windows.Forms.Label();
             this.bezeichnungTextBox = new System.Windows.Forms.TextBox();
             this.phasenFortschrittTextBox = new System.Windows.Forms.TextBox();
             this.statusTextBox = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.activateStartEffektivButton = new System.Windows.Forms.Button();
             this.activateEndEffektivButton = new System.Windows.Forms.Button();
             this.activateFreigabeButton = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.meilensteinTitelLabel = new System.Windows.Forms.Label();
             this.meilensteineLabel = new System.Windows.Forms.Label();
             this.editMeilensteineButton = new System.Windows.Forms.Button();
             this.linkLabelDokumente = new System.Windows.Forms.LinkLabel();
@@ -164,14 +164,14 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.aktivitaetenTitelLabel.TabIndex = 1;
             this.aktivitaetenTitelLabel.Text = "Aktivitäten";
             // 
-            // aktivitaetenTitelLbl
+            // aktivitaetenLabel
             // 
-            this.aktivitaetenTitelLbl.AutoSize = true;
-            this.aktivitaetenTitelLbl.Location = new System.Drawing.Point(402, 275);
-            this.aktivitaetenTitelLbl.Name = "aktivitaetenTitelLbl";
-            this.aktivitaetenTitelLbl.Size = new System.Drawing.Size(10, 13);
-            this.aktivitaetenTitelLbl.TabIndex = 1;
-            this.aktivitaetenTitelLbl.Text = "-";
+            this.aktivitaetenLabel.AutoSize = true;
+            this.aktivitaetenLabel.Location = new System.Drawing.Point(402, 275);
+            this.aktivitaetenLabel.Name = "aktivitaetenLabel";
+            this.aktivitaetenLabel.Size = new System.Drawing.Size(10, 13);
+            this.aktivitaetenLabel.TabIndex = 1;
+            this.aktivitaetenLabel.Text = "-";
             // 
             // bezeichnungTextBox
             // 
@@ -305,14 +305,14 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.activateFreigabeButton.UseVisualStyleBackColor = true;
             this.activateFreigabeButton.Click += new System.EventHandler(this.activateFreigabeDatePicker_Click);
             // 
-            // label11
+            // meilensteinTitelLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 242);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Meilensteine";
+            this.meilensteinTitelLabel.AutoSize = true;
+            this.meilensteinTitelLabel.Location = new System.Drawing.Point(13, 242);
+            this.meilensteinTitelLabel.Name = "meilensteinTitelLabel";
+            this.meilensteinTitelLabel.Size = new System.Drawing.Size(66, 13);
+            this.meilensteinTitelLabel.TabIndex = 1;
+            this.meilensteinTitelLabel.Text = "Meilensteine";
             // 
             // meilensteineLabel
             // 
@@ -368,8 +368,8 @@ namespace ProjektManagementSystem.VorgehensmodelForms
             this.Controls.Add(this.phasenFortschrittTextBox);
             this.Controls.Add(this.meilensteineLabel);
             this.Controls.Add(this.bezeichnungTextBox);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.aktivitaetenTitelLbl);
+            this.Controls.Add(this.meilensteinTitelLabel);
+            this.Controls.Add(this.aktivitaetenLabel);
             this.Controls.Add(this.aktivitaetenTitelLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -404,7 +404,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label aktivitaetenTitelLabel;
-        private System.Windows.Forms.Label aktivitaetenTitelLbl;
+        private System.Windows.Forms.Label aktivitaetenLabel;
         private System.Windows.Forms.TextBox bezeichnungTextBox;
         private System.Windows.Forms.TextBox phasenFortschrittTextBox;
         private System.Windows.Forms.TextBox statusTextBox;
@@ -421,7 +421,7 @@ namespace ProjektManagementSystem.VorgehensmodelForms
         private System.Windows.Forms.Button activateStartEffektivButton;
         private System.Windows.Forms.Button activateEndEffektivButton;
         private System.Windows.Forms.Button activateFreigabeButton;
-        private Label label11;
+        private Label meilensteinTitelLabel;
         private Label meilensteineLabel;
         private Button editMeilensteineButton;
         private LinkLabel linkLabelDokumente;

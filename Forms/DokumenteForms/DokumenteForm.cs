@@ -237,21 +237,18 @@ namespace ProjektManagementSystem.DokumenteForms
             try
             {
                 // Check if file exists with its full path    
-                string deletePath = Path.Combine(deleteDokument.dokumentpfad, deleteDokument.name);
-                if (File.Exists(deletePath))
+                if (File.Exists(deleteDokument.dokumentpfad))
                 {
                     // If file found, delete it    
-                    File.Delete(deletePath);
-                    Console.WriteLine("File deleted.");
+                    File.Delete(deleteDokument.dokumentpfad);
+                    MessageBox.Show("File deleted.");
                 }
-                else Console.WriteLine("Could not deleete File from Directory " + deletePath + ". File not found");
+                else MessageBox.Show("Could not delete File from Directory " + deleteDokument.dokumentpfad + ". File not found");
             }
             catch (IOException ioExp)
             {
-                Console.WriteLine(ioExp.Message);
+                MessageBox.Show("Folgender Fehler ist aufgetretten: "  + ioExp.Message);
             }
-
-            Console.ReadKey();
         }
     }
 }
